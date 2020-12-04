@@ -1,0 +1,80 @@
+.box-card{
+  max-width:56rem;
+  border-radius:1.5rem!important;
+  margin:2rem;
+  .status{
+    font-size:2rem;
+    font-weight: 600;
+    img{
+      margin-right:1rem;
+    }
+  }
+  .card_dropdown{
+    cursor:pointer;
+  }
+.el-card__body{
+  padding:0;
+}
+
+  .circle{
+    border:2px solid $color-primary;
+    width:3rem;
+    height:3rem;
+    margin-right:1rem;
+    border-radius:50%;
+    display:inline-block;
+  }
+  .card-body{
+    border-bottom: 1px solid #EBEEF5;
+  }
+  .card_item{
+    padding:2rem;
+
+    &--description{
+      margin-left:3rem;
+      text-align: left;
+      p{padding:.5rem 0;}
+        .item_title{
+          color:$color-secondary;
+          font-size:1.6rem;
+          font-weight: 500;
+        }
+      .item_purchased--info{
+        font-size:1.3rem;
+        font-weight: 400;
+      }
+      .item_order--id{
+        font-size:1.3rem;
+        font-weight: 400;
+      }
+      .item_price{
+        font-size:1.6rem;
+        font-weight: 600;
+        color:$price-color;
+      }
+
+
+    }
+  }
+
+  .card-footer{
+    padding:2rem;
+  }
+
+  .order_details{
+    background:lighten($price-color, 63%);
+    border:1px solid $price-color;
+    color:$price-color;
+    padding:1.5rem 2rem;
+    border-bottom-left-radius:1.5rem;
+    border-bottom-right-radius:1.5rem;
+    .block_2{
+      justify-content: space-between;
+      padding:.5rem 0;
+    }
+    .date{
+      font-size:1.3rem;
+    }
+
+  }
+}

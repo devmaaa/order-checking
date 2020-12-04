@@ -1,0 +1,68 @@
+#app {
+  .el-header{
+    padding: 0 15rem;
+  }
+  .header {
+    align-items: center;
+    background: #fff;
+    color:$color-secondary;
+    font-weight: 600;
+    border-bottom: solid .1rem #e6e6e6;
+    .logo_block{
+      padding:1rem 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      p{
+        font-size:2.8rem;
+        font-weight: 700;
+        color:$color-secondary;
+      }
+      .circle{
+        background:$primary-lighter;
+        width:3rem;
+        height:3rem;
+        margin-right:1rem;
+        border-radius:50%;
+        display:inline-block;
+      }
+    }
+    .dropdown {
+      width:14rem;
+      cursor: pointer;
+      font-size: 1.7rem;
+    }
+    .is-active {
+      color: $color-primary;
+    }
+    .el-menu-item {
+      height: 5.9rem;
+      font-size: 1.7rem;
+    }
+    .profile_section{
+
+      text-align:right;
+      .element_container{
+        margin:1rem 0;
+      }
+      .avatar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .title{
+        font-size:1.3rem;
+        font-weight: 500;
+        margin:0;
+        color:$color-secondary;
+      }
+      .subtitle{
+        font-size:1.1rem;
+        font-weight: 600;
+        margin:0;
+        color:$color-secondary;
+      }
+
+    }
+  }
+}
