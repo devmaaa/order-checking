@@ -1,5 +1,7 @@
 # upwork_vue_ts_project
 
+typescript  vue-property-decorator project
+
 ## Project setup
 ```
 npm install
