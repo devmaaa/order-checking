@@ -1,7 +1,7 @@
 .box-card{
   max-width:56rem;
+  width:100%;
   border-radius:1.5rem!important;
-  margin:2rem;
   .status{
     font-size:2rem;
     font-weight: 600;
@@ -53,8 +53,10 @@
         color:$price-color;
       }
 
-
     }
+  }
+  .card_buttons{
+    //min-width:40rem;
   }
 
   .card-footer{
@@ -76,5 +78,39 @@
       font-size:1.3rem;
     }
 
+  }
+}
+
+@include respond(phone) {
+  .box-card{
+    max-width:100%;
+    .card-footer{
+      padding:1rem 0;
+    }
+    .card_buttons{
+
+      width:100%;
+
+      button {
+        margin:.5rem;
+        padding: .8rem;
+        font-size:1.3rem;
+      }
+    }
+    .order_details{
+      padding:1rem;
+    }
+  }
+}
+
+@include respond(extra-small) {
+  .box-card{
+    .card_buttons{
+      button{
+        margin:.5rem;
+        padding: .8rem;
+        font-size:1rem;
+      }
+    }
   }
 }

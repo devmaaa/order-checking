@@ -1,14 +1,11 @@
 <template>
 
-  <div class="card_container"  >
-
-      <el-card class="box-card" shadow="hover"  >
+  <el-card class="box-card" shadow="hover"  >
         <div slot="header" class="block_2" style="justify-content: space-between">
           <div class="status block_2" >
             <!--<el-button type="success" circle icon="el-icon-check"></el-button>-->
             <div>
-              <img :src="getIconUrl(itemData['status'].icon)"  alt="icon"  >
-
+              <img :src="getIconUrl(itemData['status'].icon )"  alt="icon"  >
             </div>
             <!-- Delivered Today-->
             <p v-bind:style="'color:' + statusChecker(itemData['status'].type)">{{itemData['status'].name}}</p>
@@ -18,9 +15,7 @@
               <div class="circle"></div>
             </div>
             <el-dropdown-menu slot="dropdown" class="card_dropdown--list">
-
               <el-dropdown-item v-for="(item , i) in itemData['details'].menuItems" :key="i">{{item}}</el-dropdown-item>
-
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -67,47 +62,36 @@
           </div>
         </div>
       </el-card>
-  </div>
+
 
 </template>
 
 <script lang="ts">
 
-import {Vue, Component, PropSync, Provide, Prop} from 'vue-property-decorator'
-import Home from "@/views/Home.vue";
-
+import {Vue, Component, PropSync} from 'vue-property-decorator'
 
 
 @Component
 export default class Card extends Vue{
 
 
-  @PropSync('item', { type: Object })  itemData!: any
+  @PropSync('item', { type: Object })  itemData!: object
 
-  public getImgUrl(src) {
+
+  public getImgUrl(src: string): string {
     if(src){
       let images = require.context('@/assets/img', false, /\.png$/)
       return images('./' + src)
     }
   }
-
-  public getIconUrl(src) {
-    let icons = require.context('@/assets/icons', false, /\.svg$/)
-    return icons('./' + src)
+  public getIconUrl(src: string): string {
+    if(src) {
+      let icons = require.context('@/assets/icons', false, /\.svg$/)
+      return icons(`./` + src)
+    }
   }
 
-   public imgPath(src,type): string{
-     if(type == 'icon'){
-        let icons = require.context(this.icon + src,false, /\.svg$/)
-        return icons('./' + src)
-     }else{
-       let images = require.context(this.img + src,false, /\.png$/)
-       return images(src)
-
-     }
-   }
-
-  public statusChecker(status: string){
+  public statusChecker(status: string): string {
          switch(status) {
            case 'delivered': {
              return '#0AD688'

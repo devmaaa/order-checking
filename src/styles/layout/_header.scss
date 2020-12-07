@@ -1,6 +1,6 @@
 #app {
   .el-header{
-    padding: 0 15rem;
+   // padding: 0 15rem;
   }
   .header {
     align-items: center;
@@ -8,6 +8,7 @@
     color:$color-secondary;
     font-weight: 600;
     border-bottom: solid .1rem #e6e6e6;
+
     .logo_block{
       padding:1rem 0;
       display: flex;
@@ -40,7 +41,6 @@
       font-size: 1.7rem;
     }
     .profile_section{
-
       text-align:right;
       .element_container{
         margin:1rem 0;
@@ -63,6 +63,19 @@
         color:$color-secondary;
       }
 
+    }
+    .drawer-button{
+      margin:1rem 0;
+    }
+    .menu-drawer{
+      text-align:left;
+      .profile_section{
+        text-align: left;
+        padding: 0 0 0 20px;
+        .element_container{
+          margin:1rem 0;
+        }
+      }
     }
   }
 }
